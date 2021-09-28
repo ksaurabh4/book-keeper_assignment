@@ -23,6 +23,9 @@ function App() {
       dispatch(fetchEvents(searchType, searchedValue))
     }
   }
+  const onResetClickHandler = () => {
+    dispatch(fetchEvents())
+  }
 
   useEffect(() => {
     dispatch(fetchEvents())
@@ -43,7 +46,7 @@ function App() {
         </select>
         <input type="text" className="search form-control" placeholder="What you looking for?" onChange={(e) => search(e)} />
         <button style={{ marginTop: 15, borderRadius: 5 }} onClick={onClickHandler}>Search</button>
-        <button style={{ marginTop: 15, margingLeft: 25, borderRadius: 5 }} onClick={onClickHandler}>Cancle filer</button>
+        <button style={{ marginTop: 15, margingLeft: 25, borderRadius: 5 }} onClick={onResetClickHandler}>Cancle filer</button>
       </div>
       <span className="counter pull-right" />
       <table className="table table-hover table-bordered results">

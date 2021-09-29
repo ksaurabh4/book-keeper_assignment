@@ -1,4 +1,38 @@
-# Getting Started with Create React App
+# **Book Keeper Coding Challenge (Backend)**
+
+REST API that saves/retrives historical events in Node js.
+
+## Features
+
+- Save events
+- Fetch Events using following filters
+  - Email
+  - Environment
+  - Component
+  - Message Search Text
+  - From given date
+
+## Requirements
+
+- [node & npm ](https://nodejs.org/en/)
+- [git](https://git-scm.com/downloads)
+
+## Installation
+
+- `git clone https://github.com/ksaurabh4/book-keeper_assignment.git`
+- `cd book-keeper_assignment`
+- `npm install`
+- `npm start`
+
+### Routes
+
+visit http://localhost:3000
+|Route|Method|Description|Parameters (without * is optional)|
+|-----|------|-----------|----------|
+|/event|POST|To save events|*email, *environment, *component, *message, *data|
+|/event|GET|To Retrieve and filter events|email, environment, component, searchText, date|
+
+# Getting Started with Create React App (Front End UI)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
